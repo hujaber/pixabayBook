@@ -12,6 +12,11 @@
 		277953AE294DEE090052A27E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277953AD294DEE090052A27E /* Assets.xcassets */; };
 		277953B1294DEE090052A27E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277953AF294DEE090052A27E /* LaunchScreen.storyboard */; };
 		277953BC294DEE090052A27E /* PixabayBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277953BB294DEE090052A27E /* PixabayBookTests.swift */; };
+		277953DF294DF7200052A27E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277953DD294DF7200052A27E /* LoginController.swift */; };
+		277953E0294DF7200052A27E /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277953DE294DF7200052A27E /* LoginController.xib */; };
+		277953E3294DF8240052A27E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277953E2294DF8240052A27E /* Coordinator.swift */; };
+		277953E5294DF86B0052A27E /* RouterNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277953E4294DF86B0052A27E /* RouterNavigationProtocol.swift */; };
+		277953E7294DF9A30052A27E /* RouterNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277953E6294DF9A30052A27E /* RouterNavigation.swift */; };
 		3619281C552E87FA3ADB1A5B /* Pods_PixabayBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C759F4871DE2CAF17158A4 /* Pods_PixabayBookTests.framework */; };
 		B679A25CEA391EAE3FB2FEAB /* Pods_PixabayBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584082D72DF1673E176438AE /* Pods_PixabayBook.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +41,11 @@
 		277953B2294DEE090052A27E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277953B7294DEE090052A27E /* PixabayBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixabayBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277953BB294DEE090052A27E /* PixabayBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayBookTests.swift; sourceTree = "<group>"; };
+		277953DD294DF7200052A27E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		277953DE294DF7200052A27E /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		277953E2294DF8240052A27E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		277953E4294DF86B0052A27E /* RouterNavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterNavigationProtocol.swift; sourceTree = "<group>"; };
+		277953E6294DF9A30052A27E /* RouterNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterNavigation.swift; sourceTree = "<group>"; };
 		584082D72DF1673E176438AE /* Pods_PixabayBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixabayBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8243CDC30721268F676AB568 /* Pods-PixabayBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayBookTests.release.xcconfig"; path = "Target Support Files/Pods-PixabayBookTests/Pods-PixabayBookTests.release.xcconfig"; sourceTree = "<group>"; };
 		900273CD5C8A36E6B88B6549 /* Pods-PixabayBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayBook.release.xcconfig"; path = "Target Support Files/Pods-PixabayBook/Pods-PixabayBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +96,9 @@
 		277953A3294DEE070052A27E /* PixabayBook */ = {
 			isa = PBXGroup;
 			children = (
+				277953E1294DF8010052A27E /* Coordinator */,
 				277953D4294DEE1B0052A27E /* Application */,
+				277953D6294DF6DF0052A27E /* Flows */,
 				277953D5294DEE390052A27E /* Resources */,
 			);
 			path = PixabayBook;
@@ -117,6 +129,73 @@
 				277953AD294DEE090052A27E /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		277953D6294DF6DF0052A27E /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				277953D8294DF6E80052A27E /* Registration */,
+				277953D7294DF6E50052A27E /* Login */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		277953D7294DF6E50052A27E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				277953DC294DF7030052A27E /* Repository */,
+				277953DB294DF6FE0052A27E /* Views */,
+				277953DA294DF6F90052A27E /* ViewModel */,
+				277953D9294DF6ED0052A27E /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		277953D8294DF6E80052A27E /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		277953D9294DF6ED0052A27E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				277953DD294DF7200052A27E /* LoginController.swift */,
+				277953DE294DF7200052A27E /* LoginController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		277953DA294DF6F90052A27E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		277953DB294DF6FE0052A27E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		277953DC294DF7030052A27E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		277953E1294DF8010052A27E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				277953E2294DF8240052A27E /* Coordinator.swift */,
+				277953E4294DF86B0052A27E /* RouterNavigationProtocol.swift */,
+				277953E6294DF9A30052A27E /* RouterNavigation.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		9B2862A0BFA43AF03C1F5853 /* Pods */ = {
@@ -224,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277953B1294DEE090052A27E /* LaunchScreen.storyboard in Resources */,
+				277953E0294DF7200052A27E /* LoginController.xib in Resources */,
 				277953AE294DEE090052A27E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277953E5294DF86B0052A27E /* RouterNavigationProtocol.swift in Sources */,
+				277953E3294DF8240052A27E /* Coordinator.swift in Sources */,
 				277953A5294DEE070052A27E /* AppDelegate.swift in Sources */,
+				277953DF294DF7200052A27E /* LoginController.swift in Sources */,
+				277953E7294DF9A30052A27E /* RouterNavigation.swift in Sources */,
 				277953A7294DEE070052A27E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
