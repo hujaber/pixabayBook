@@ -86,8 +86,8 @@
 		277953A3294DEE070052A27E /* PixabayBook */ = {
 			isa = PBXGroup;
 			children = (
-				277953D5294DEE390052A27E /* Resources */,
 				277953D4294DEE1B0052A27E /* Application */,
+				277953D5294DEE390052A27E /* Resources */,
 			);
 			path = PixabayBook;
 			sourceTree = "<group>";
@@ -127,7 +127,6 @@
 				17C4F2F9002B644470A98810 /* Pods-PixabayBookTests.debug.xcconfig */,
 				8243CDC30721268F676AB568 /* Pods-PixabayBookTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -471,7 +470,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,7 +499,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
