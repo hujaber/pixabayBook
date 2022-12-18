@@ -25,8 +25,6 @@ final class ApplicationCoordinator: Coordinator {
     }
     
     func start() {
-        startMainFlow()
-        return
         let viewModel = LoginViewModel(emailValidator: EmailValidator(), passwordValidator: PasswordValidator())
         
         viewModel.showSignUp
