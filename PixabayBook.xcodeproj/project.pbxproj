@@ -23,6 +23,8 @@
 		27ABB317294F05B600E297E6 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB315294F05B600E297E6 /* RegistrationController.swift */; };
 		27ABB318294F05B600E297E6 /* RegistrationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27ABB316294F05B600E297E6 /* RegistrationController.xib */; };
 		27ABB31B294F066400E297E6 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB31A294F066400E297E6 /* RegistrationViewModel.swift */; };
+		27ABB31E294F0F2500E297E6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB31D294F0F2500E297E6 /* UIViewController.swift */; };
+		27ABB320294F0FB600E297E6 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB31F294F0FB600E297E6 /* Reactive.swift */; };
 		27C7F8CB294F00E800BA97EB /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F8CA294F00E800BA97EB /* Validator.swift */; };
 		3619281C552E87FA3ADB1A5B /* Pods_PixabayBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C759F4871DE2CAF17158A4 /* Pods_PixabayBookTests.framework */; };
 		B679A25CEA391EAE3FB2FEAB /* Pods_PixabayBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584082D72DF1673E176438AE /* Pods_PixabayBook.framework */; };
@@ -59,6 +61,8 @@
 		27ABB315294F05B600E297E6 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		27ABB316294F05B600E297E6 /* RegistrationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationController.xib; sourceTree = "<group>"; };
 		27ABB31A294F066400E297E6 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		27ABB31D294F0F2500E297E6 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		27ABB31F294F0FB600E297E6 /* Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		27C7F8CA294F00E800BA97EB /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		584082D72DF1673E176438AE /* Pods_PixabayBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixabayBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8243CDC30721268F676AB568 /* Pods-PixabayBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayBookTests.release.xcconfig"; path = "Target Support Files/Pods-PixabayBookTests/Pods-PixabayBookTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		277953A3294DEE070052A27E /* PixabayBook */ = {
 			isa = PBXGroup;
 			children = (
+				27ABB31C294F0F1B00E297E6 /* Exetnsions */,
 				277953D4294DEE1B0052A27E /* Application */,
 				277953E1294DF8010052A27E /* Coordinator */,
 				277953D6294DF6DF0052A27E /* Flows */,
@@ -225,6 +230,15 @@
 				27ABB31A294F066400E297E6 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27ABB31C294F0F1B00E297E6 /* Exetnsions */ = {
+			isa = PBXGroup;
+			children = (
+				27ABB31D294F0F2500E297E6 /* UIViewController.swift */,
+				27ABB31F294F0FB600E297E6 /* Reactive.swift */,
+			);
+			path = Exetnsions;
 			sourceTree = "<group>";
 		};
 		27C7F8C9294F00D800BA97EB /* Validator */ = {
@@ -431,10 +445,12 @@
 				277953E3294DF8240052A27E /* Coordinator.swift in Sources */,
 				277953A5294DEE070052A27E /* AppDelegate.swift in Sources */,
 				277953EB294DFF570052A27E /* LoginViewModel.swift in Sources */,
+				27ABB31E294F0F2500E297E6 /* UIViewController.swift in Sources */,
 				27ABB317294F05B600E297E6 /* RegistrationController.swift in Sources */,
 				277953E7294DF9A30052A27E /* RouterNavigation.swift in Sources */,
 				2734E37C294E00E500B1B965 /* LoginController.swift in Sources */,
 				277953A7294DEE070052A27E /* SceneDelegate.swift in Sources */,
+				27ABB320294F0FB600E297E6 /* Reactive.swift in Sources */,
 				277953E9294DFE220052A27E /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
