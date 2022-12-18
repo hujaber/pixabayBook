@@ -1,8 +1,13 @@
 PODS:
+  - Differentiator (5.0.0)
   - Kingfisher (7.4.1)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
@@ -10,21 +15,26 @@ PODS:
 DEPENDENCIES:
   - Kingfisher (~> 7.0)
   - RxCocoa (= 6.5.0)
+  - RxDataSources
   - RxSwift (= 6.5.0)
 
 SPEC REPOS:
   trunk:
+    - Differentiator
     - Kingfisher
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 5d73a24d8bcd87a7131d10f4951f258a44b19d10
+PODFILE CHECKSUM: c7fb57d889d7b4adafff55b8ddfd64b1ea4c4c89
 
 COCOAPODS: 1.11.3

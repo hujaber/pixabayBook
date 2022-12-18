@@ -23,6 +23,10 @@
 		2794CD0E294FC7BE0017251B /* ImageDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794CD0D294FC7BE0017251B /* ImageDetailsViewModel.swift */; };
 		2794CD11294FC8290017251B /* ImageDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794CD0F294FC8290017251B /* ImageDetailsController.swift */; };
 		2794CD12294FC8290017251B /* ImageDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2794CD10294FC8290017251B /* ImageDetailsController.xib */; };
+		2794CD16294FCD5B0017251B /* ImageDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794CD14294FCD5B0017251B /* ImageDetailCell.swift */; };
+		2794CD17294FCD5B0017251B /* ImageDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2794CD15294FCD5B0017251B /* ImageDetailCell.xib */; };
+		2794CD1A294FCFBD0017251B /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794CD18294FCFBD0017251B /* ImageCell.swift */; };
+		2794CD1B294FCFBD0017251B /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2794CD19294FCFBD0017251B /* ImageCell.xib */; };
 		27ABB317294F05B600E297E6 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB315294F05B600E297E6 /* RegistrationController.swift */; };
 		27ABB318294F05B600E297E6 /* RegistrationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27ABB316294F05B600E297E6 /* RegistrationController.xib */; };
 		27ABB31B294F066400E297E6 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB31A294F066400E297E6 /* RegistrationViewModel.swift */; };
@@ -75,6 +79,10 @@
 		2794CD0D294FC7BE0017251B /* ImageDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewModel.swift; sourceTree = "<group>"; };
 		2794CD0F294FC8290017251B /* ImageDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsController.swift; sourceTree = "<group>"; };
 		2794CD10294FC8290017251B /* ImageDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailsController.xib; sourceTree = "<group>"; };
+		2794CD14294FCD5B0017251B /* ImageDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailCell.swift; sourceTree = "<group>"; };
+		2794CD15294FCD5B0017251B /* ImageDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailCell.xib; sourceTree = "<group>"; };
+		2794CD18294FCFBD0017251B /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		2794CD19294FCFBD0017251B /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		27ABB315294F05B600E297E6 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		27ABB316294F05B600E297E6 /* RegistrationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationController.xib; sourceTree = "<group>"; };
 		27ABB31A294F066400E297E6 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -249,6 +257,7 @@
 		2794CD0A294FC7A00017251B /* ImageDetails */ = {
 			isa = PBXGroup;
 			children = (
+				2794CD13294FCD440017251B /* Cells */,
 				2794CD0C294FC7B30017251B /* ViewModel */,
 				2794CD0B294FC7AF0017251B /* Controller */,
 			);
@@ -270,6 +279,17 @@
 				2794CD0D294FC7BE0017251B /* ImageDetailsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2794CD13294FCD440017251B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2794CD14294FCD5B0017251B /* ImageDetailCell.swift */,
+				2794CD15294FCD5B0017251B /* ImageDetailCell.xib */,
+				2794CD18294FCFBD0017251B /* ImageCell.swift */,
+				2794CD19294FCFBD0017251B /* ImageCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		27ABB314294F05A200E297E6 /* Controller */ = {
@@ -493,9 +513,11 @@
 			files = (
 				27ABB32C294F110200E297E6 /* MainScreenController.xib in Resources */,
 				277953B1294DEE090052A27E /* LaunchScreen.storyboard in Resources */,
+				2794CD17294FCD5B0017251B /* ImageDetailCell.xib in Resources */,
 				2794CD12294FC8290017251B /* ImageDetailsController.xib in Resources */,
 				2734E37D294E00E500B1B965 /* LoginController.xib in Resources */,
 				27ABB331294F3BD300E297E6 /* ImageTableViewCell.xib in Resources */,
+				2794CD1B294FCFBD0017251B /* ImageCell.xib in Resources */,
 				27ABB318294F05B600E297E6 /* RegistrationController.xib in Resources */,
 				277953AE294DEE090052A27E /* Assets.xcassets in Resources */,
 			);
@@ -590,6 +612,7 @@
 				277953A5294DEE070052A27E /* AppDelegate.swift in Sources */,
 				27ABB33F294FAFFD00E297E6 /* Request.swift in Sources */,
 				277953EB294DFF570052A27E /* LoginViewModel.swift in Sources */,
+				2794CD1A294FCFBD0017251B /* ImageCell.swift in Sources */,
 				27ABB328294F10AF00E297E6 /* ImagesRepository.swift in Sources */,
 				27ABB31E294F0F2500E297E6 /* UIViewController.swift in Sources */,
 				27ABB317294F05B600E297E6 /* RegistrationController.swift in Sources */,
@@ -597,6 +620,7 @@
 				277953E7294DF9A30052A27E /* RouterNavigation.swift in Sources */,
 				27ABB334294F3EEE00E297E6 /* Photo.swift in Sources */,
 				2734E37C294E00E500B1B965 /* LoginController.swift in Sources */,
+				2794CD16294FCD5B0017251B /* ImageDetailCell.swift in Sources */,
 				27ABB32B294F110200E297E6 /* MainScreenController.swift in Sources */,
 				27ABB326294F106F00E297E6 /* MainScreenViewModel.swift in Sources */,
 				2794CD0E294FC7BE0017251B /* ImageDetailsViewModel.swift in Sources */,
