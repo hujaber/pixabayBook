@@ -20,3 +20,11 @@ extension Reactive where Base: UIViewController {
         }
     }
 }
+
+extension Reactive where Base: UIViewController {
+    var onError: Binder<Error> {
+        return .init(self.base) { vc, error in
+            vc.showAlert(forError: error)
+        }
+    }
+}

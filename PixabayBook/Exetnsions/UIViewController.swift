@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Loader
 extension UIViewController {
     
     private var loaderTag: Int {
@@ -28,5 +29,19 @@ extension UIViewController {
         if let loader = view.subviews.first(where: { $0.tag == loaderTag }) {
             loader.removeFromSuperview()
         }
+    }
+}
+
+// MARK: Errors
+extension UIViewController {
+    func showAlert(forError error: Error) {
+        showAlert(title: "Error", message: error.localizedDescription)
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
 }
