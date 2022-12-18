@@ -31,6 +31,9 @@
 		27ABB32C294F110200E297E6 /* MainScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27ABB32A294F110200E297E6 /* MainScreenController.xib */; };
 		27ABB330294F3BD300E297E6 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB32E294F3BD300E297E6 /* ImageTableViewCell.swift */; };
 		27ABB331294F3BD300E297E6 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27ABB32F294F3BD300E297E6 /* ImageTableViewCell.xib */; };
+		27ABB334294F3EEE00E297E6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB333294F3EEE00E297E6 /* Photo.swift */; };
+		27ABB337294F3FA300E297E6 /* PixabayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB336294F3FA300E297E6 /* PixabayDataSource.swift */; };
+		27ABB33A294F411600E297E6 /* PixabayPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABB339294F411600E297E6 /* PixabayPhotosResponse.swift */; };
 		27C7F8CB294F00E800BA97EB /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7F8CA294F00E800BA97EB /* Validator.swift */; };
 		3619281C552E87FA3ADB1A5B /* Pods_PixabayBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C759F4871DE2CAF17158A4 /* Pods_PixabayBookTests.framework */; };
 		B679A25CEA391EAE3FB2FEAB /* Pods_PixabayBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584082D72DF1673E176438AE /* Pods_PixabayBook.framework */; };
@@ -75,6 +78,9 @@
 		27ABB32A294F110200E297E6 /* MainScreenController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenController.xib; sourceTree = "<group>"; };
 		27ABB32E294F3BD300E297E6 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		27ABB32F294F3BD300E297E6 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		27ABB333294F3EEE00E297E6 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		27ABB336294F3FA300E297E6 /* PixabayDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayDataSource.swift; sourceTree = "<group>"; };
+		27ABB339294F411600E297E6 /* PixabayPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayPhotosResponse.swift; sourceTree = "<group>"; };
 		27C7F8CA294F00E800BA97EB /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		584082D72DF1673E176438AE /* Pods_PixabayBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PixabayBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8243CDC30721268F676AB568 /* Pods-PixabayBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixabayBookTests.release.xcconfig"; path = "Target Support Files/Pods-PixabayBookTests/Pods-PixabayBookTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +263,9 @@
 		27ABB321294F103500E297E6 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				27ABB338294F410200E297E6 /* Response */,
+				27ABB335294F3F8700E297E6 /* DataSource */,
+				27ABB332294F3E1F00E297E6 /* Models */,
 				27ABB32D294F3BBF00E297E6 /* Cell */,
 				27ABB324294F104000E297E6 /* ViewModel */,
 				27ABB323294F103B00E297E6 /* Repository */,
@@ -297,6 +306,30 @@
 				27ABB32F294F3BD300E297E6 /* ImageTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		27ABB332294F3E1F00E297E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27ABB333294F3EEE00E297E6 /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		27ABB335294F3F8700E297E6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				27ABB336294F3FA300E297E6 /* PixabayDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		27ABB338294F410200E297E6 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				27ABB339294F411600E297E6 /* PixabayPhotosResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		27C7F8C9294F00D800BA97EB /* Validator */ = {
@@ -509,13 +542,16 @@
 				27ABB328294F10AF00E297E6 /* ImagesRepository.swift in Sources */,
 				27ABB31E294F0F2500E297E6 /* UIViewController.swift in Sources */,
 				27ABB317294F05B600E297E6 /* RegistrationController.swift in Sources */,
+				27ABB337294F3FA300E297E6 /* PixabayDataSource.swift in Sources */,
 				277953E7294DF9A30052A27E /* RouterNavigation.swift in Sources */,
+				27ABB334294F3EEE00E297E6 /* Photo.swift in Sources */,
 				2734E37C294E00E500B1B965 /* LoginController.swift in Sources */,
 				27ABB32B294F110200E297E6 /* MainScreenController.swift in Sources */,
 				27ABB326294F106F00E297E6 /* MainScreenViewModel.swift in Sources */,
 				277953A7294DEE070052A27E /* SceneDelegate.swift in Sources */,
 				27ABB320294F0FB600E297E6 /* Reactive.swift in Sources */,
 				277953E9294DFE220052A27E /* ApplicationCoordinator.swift in Sources */,
+				27ABB33A294F411600E297E6 /* PixabayPhotosResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
