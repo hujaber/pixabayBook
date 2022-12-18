@@ -16,6 +16,7 @@ extension UIViewController {
     
     func showLoader() {
         let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.tag = loaderTag
         activityIndicator.tintColor = .blue
         
