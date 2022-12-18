@@ -20,6 +20,7 @@ protocol LoginViewModelProtocol: AnyObject {
     var passwordErrorMessage: PublishRelay<String?> { get }
     var canLogin: BehaviorRelay<Bool> { get }
     var login: PublishRelay<Void> { get }
+    var endFlow: PublishRelay<Void> { get }
 }
 
 final class LoginViewModel: LoginViewModelProtocol {
@@ -31,6 +32,7 @@ final class LoginViewModel: LoginViewModelProtocol {
     let passwordErrorMessage: PublishRelay<String?> = .init()
     let canLogin: BehaviorRelay<Bool> = .init(value: false)
     let login: PublishRelay<Void> = .init()
+    let endFlow: PublishRelay<Void> = .init()
     
     private let disposeBag = DisposeBag()
     
@@ -74,6 +76,6 @@ final class LoginViewModel: LoginViewModelProtocol {
     }
     
     private func login(withEmail email: String, andPassword password: String) {
-        
+        endFlow.accept(())
     }
 }

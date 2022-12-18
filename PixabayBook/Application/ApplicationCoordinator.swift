@@ -25,6 +25,8 @@ final class ApplicationCoordinator: Coordinator {
     }
     
     func start() {
+        startMainFlow()
+        return
         let viewModel = LoginViewModel(emailValidator: EmailValidator(), passwordValidator: PasswordValidator())
         
         viewModel.showSignUp
@@ -32,6 +34,14 @@ final class ApplicationCoordinator: Coordinator {
             .observe(on: MainScheduler.instance)
             .bind { strongSelf, _ in
                 strongSelf.showSignUpScreen()
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.endFlow
+            .withUnretained(self)
+            .observe(on: MainScheduler.instance)
+            .bind { strongSelf, _ in
+                strongSelf.startMainFlow()
             }
             .disposed(by: disposeBag)
         
@@ -51,7 +61,36 @@ final class ApplicationCoordinator: Coordinator {
             }
             .disposed(by: disposeBag)
         
+        viewModel.endFlow
+            .withUnretained(self)
+            .observe(on: MainScheduler.instance)
+            .bind { strongSelf, _ in
+                strongSelf.startMainFlow()
+            }
+            .disposed(by: disposeBag)
+        
         let controller = RegistrationController(withViewModel: viewModel)
+        router.push(controller, isAnimated: true, onNavigateBack: nil)
+    }
+    
+    private func startMainFlow() {
+        let dataSource = PixabayDataSource(apiClient: APIClient())
+        let repository = ImagesRepository(withDataSource: dataSource)
+        let viewModel = MainScreenViewModel(repository: repository)
+        viewModel.didSelectPhoto
+            .withUnretained(self)
+            .observe(on: MainScheduler.instance)
+            .bind { strongSelf, photo in
+                strongSelf.showPhotoDetailsScreen(forPhoto: photo)
+            }
+            .disposed(by: disposeBag)
+        let controller = MainScreenController(withViewModel: viewModel)
+        router.setRoot(controller, animated: true)
+    }
+    
+    private func showPhotoDetailsScreen(forPhoto photo: Photo) {
+        let viewModel = ImageDetailsViewModel(photo: photo)
+        let controller = ImageDetailsController(withViewModel: viewModel)
         router.push(controller, isAnimated: true, onNavigateBack: nil)
     }
 

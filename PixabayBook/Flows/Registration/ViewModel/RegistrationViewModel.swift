@@ -22,6 +22,7 @@ protocol RegistrationViewModelProtocol: AnyObject {
     var emailErrorMessage: PublishRelay<String?> { get }
     var passwordErrorMessage: PublishRelay<String?> { get }
     var ageErrorMessage: PublishRelay<String?> { get }
+    var endFlow: PublishRelay<Void> { get }
 }
 
 final class RegistrationViewModel: RegistrationViewModelProtocol {
@@ -36,6 +37,8 @@ final class RegistrationViewModel: RegistrationViewModelProtocol {
     let emailErrorMessage: PublishRelay<String?> = .init()
     let passwordErrorMessage: PublishRelay<String?> = .init()
     let ageErrorMessage: PublishRelay<String?> = .init()
+    
+    let endFlow: PublishRelay<Void> = .init()
     
     private let disposeBag = DisposeBag()
     
@@ -92,7 +95,7 @@ final class RegistrationViewModel: RegistrationViewModelProtocol {
     }
     
     private func signUp(email: String, password: String, age: String) {
-        
+        endFlow.accept(())
     }
     
 }

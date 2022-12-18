@@ -17,7 +17,9 @@ extension UIViewController {
     func showLoader() {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.tag = loaderTag
-        view.addSubview(activityIndicator)
+        activityIndicator.tintColor = .blue
+        
+        view.insertSubview(activityIndicator, at: 10)
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)

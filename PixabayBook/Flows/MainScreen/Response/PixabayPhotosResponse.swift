@@ -21,7 +21,9 @@ struct Hit: Codable {
     let previewWidth, previewHeight: Int
     let webformatUrl: String
     let webformatWidth, webformatHeight: Int
-    let largeImageUrl, fullHdurl, imageUrl: String
+    let largeImageUrl: String
+    let imageUrl: String?
+    let fullHdurl: String?
     let imageWidth, imageHeight, imageSize, views: Int
     let downloads, likes, comments, userId: Int
     let user: String

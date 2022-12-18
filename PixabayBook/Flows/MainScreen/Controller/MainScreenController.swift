@@ -44,6 +44,15 @@ class MainScreenController: UIViewController {
         viewModel.onError
             .bind(to: rx.onError)
             .disposed(by: disposeBag)
+        
+        viewModel.datasource.bind(to: tableView.rx.items(cellIdentifier: ImageTableViewCell.identifier, cellType: ImageTableViewCell.self)) { (row, item, cell) in
+            cell.photo = item
+        }
+        .disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(Photo.self)
+            .bind(to: viewModel.didSelectPhoto)
+            .disposed(by: disposeBag)
     }
 
 }
