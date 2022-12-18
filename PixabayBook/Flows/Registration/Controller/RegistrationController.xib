@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationController" customModule="PixabayBook" customModuleProvider="target">
+            <connections>
+                <outlet property="ageTextField" destination="DDB-hj-qBa" id="Uwa-3b-BTh"/>
+                <outlet property="emailTextField" destination="gxR-cQ-uCP" id="AgC-c0-KZv"/>
+                <outlet property="loginButton" destination="OJU-qD-hzo" id="qAD-st-RDL"/>
+                <outlet property="passwordTextField" destination="2Zt-wC-lRz" id="DXY-bK-QHI"/>
+                <outlet property="signUpButton" destination="Uhs-AJ-UJ7" id="ef3-Qt-SP1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxR-cQ-uCP" customClass="ErrorLabelTextField" customModule="PixabayBook" customModuleProvider="target">
+                    <rect key="frame" x="16" y="159" width="361" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Zt-wC-lRz" customClass="ErrorLabelTextField" customModule="PixabayBook" customModuleProvider="target">
+                    <rect key="frame" x="16" y="218" width="361" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DDB-hj-qBa" customClass="ErrorLabelTextField" customModule="PixabayBook" customModuleProvider="target">
+                    <rect key="frame" x="16" y="277" width="361" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-AJ-UJ7">
+                    <rect key="frame" x="159" y="370" width="75" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJU-qD-hzo">
+                    <rect key="frame" x="159" y="754" width="75" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Uhs-AJ-UJ7" firstAttribute="top" secondItem="DDB-hj-qBa" secondAttribute="bottom" constant="59" id="5GC-NM-SEK"/>
+                <constraint firstItem="2Zt-wC-lRz" firstAttribute="top" secondItem="gxR-cQ-uCP" secondAttribute="bottom" constant="25" id="91R-72-4jW"/>
+                <constraint firstItem="gxR-cQ-uCP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="Dbg-if-tCr"/>
+                <constraint firstItem="DDB-hj-qBa" firstAttribute="top" secondItem="2Zt-wC-lRz" secondAttribute="bottom" constant="25" id="JxP-y5-WgI"/>
+                <constraint firstItem="DDB-hj-qBa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="R4j-kj-i1I"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Zt-wC-lRz" secondAttribute="trailing" constant="16" id="VUq-1l-8Kt"/>
+                <constraint firstItem="OJU-qD-hzo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XJP-9g-641"/>
+                <constraint firstItem="Uhs-AJ-UJ7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YbC-yT-oMb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gxR-cQ-uCP" secondAttribute="trailing" constant="16" id="anC-s5-UOt"/>
+                <constraint firstItem="2Zt-wC-lRz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="kyc-Kw-jGU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DDB-hj-qBa" secondAttribute="trailing" constant="16" id="q0x-HM-zIj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OJU-qD-hzo" secondAttribute="bottom" constant="29" id="rbR-CJ-z59"/>
+                <constraint firstItem="gxR-cQ-uCP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="v6M-sQ-gYB"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
